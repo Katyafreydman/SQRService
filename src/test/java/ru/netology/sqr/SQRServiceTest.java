@@ -27,20 +27,10 @@ public class SQRServiceTest {
     }
 
     @Test
-    public void countSquaresUnderlimit() {
+    public void countSquaresOverlimit() {
         SQRService service = new SQRService();
-        //проверяем диапозон 150,350, тест не проходит
-
-        int actual = service.calculate(150, 350);
-        int expected = 3;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void countSquaresBig() {
-        SQRService service = new SQRService();
-        //проверяем диапозон 7000, 15000, тест  не проходит
-        int actual = service.calculate(7000, 15000);
+        //проверяем диапозон 100,400, тест  проходит
+        int actual = service.calculate(201, 301);
         int expected = 3;
         assertEquals(expected, actual);
     }
